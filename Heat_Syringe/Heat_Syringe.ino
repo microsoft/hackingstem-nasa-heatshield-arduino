@@ -57,14 +57,14 @@ void setup()
 
 void loop()
 {
-
-  int sensorInput = analogRead(A0); // read the analog sensor
-  tempC = (double)sensorInput / 1024; // divide by 1024 to get percentage of
-                                      // input reading in millivolts
-  tempC = tempC * 5;                  // multiply by 5V to get voltage
-  tempC = tempC - 0.5; // Subtract the offset specified in TMP36 datasheet
-  tempC = tempC * 100; // Convert to degrees
-    
+//
+//  int sensorInput = analogRead(A0); // read the analog sensor
+//  tempC = (double)sensorInput / 1024; // divide by 1024 to get percentage of
+//                                      // input reading in millivolts
+//  tempC = tempC * 3.3;                  // multiply by 3.3V to get voltage
+//  tempC = tempC - 0.5; // Subtract the offset specified in TMP36 datasheet
+//  tempC = tempC * 100; // Convert to degrees
+//    
   /*float altitude = myPressure.readAltitude();
   Serial.print("Altitude(m):");
   Serial.print(altitude, 2);
@@ -74,18 +74,14 @@ void loop()
   Serial.print(altitude, 2);*/
 
   float pressure = myPressure.readPressure();
-  Serial.print(pressure, 2);
+  float temperature = myPressure.readTemp();
+  float temperatureF = myPressure.readTempF();
 
+  Serial.print(pressure, 2);
   Serial.print(",");
-  Serial.print(tempC, 2);  
-  
-//  float temperature = myPressure.readTemp();
-//  Serial.print(" Temp(c):");
-//  Serial.print(temperature, 2);
-//
-//  float temperatureF = myPressure.readTempF();
-//  Serial.print(" Temp(f):");
-//  Serial.print(temperatureF, 2);
+  Serial.print(temperature, 2);
+  Serial.print(",");
+  Serial.print(temperatureF, 2);
 
 
   Serial.println();
