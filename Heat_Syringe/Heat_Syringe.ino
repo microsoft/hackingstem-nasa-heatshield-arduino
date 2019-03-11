@@ -77,6 +77,7 @@ void loop()
   float temperature = myPressure.readTemp();
   float temperatureF = myPressure.readTempF();
 
+  Serial.print(",");
   Serial.print(pressure, 2);
   Serial.print(",");
   Serial.print(temperature, 2);
