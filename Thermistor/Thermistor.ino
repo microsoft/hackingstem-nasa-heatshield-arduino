@@ -111,8 +111,6 @@ void sendDataToSerial()
   {
     serialPreviousTime = millis(); // Reset serial interval timestamp
     
-    // Send data out separated by a comma (kDelimiter)
-    Serial.print(kDelimiter);
     Serial.print(backTempReading);
     Serial.print(kDelimiter);
     Serial.print(frontTempReading);
