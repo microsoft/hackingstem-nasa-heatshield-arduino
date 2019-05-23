@@ -110,10 +110,10 @@ void sendDataToSerial()
   if((millis() - serialPreviousTime) > kSerialInterval) 
   {
     serialPreviousTime = millis(); // Reset serial interval timestamp
-    
-    Serial.print(backTempReading);
-    Serial.print(kDelimiter);
+
     Serial.print(frontTempReading);
+    Serial.print(kDelimiter);
+    Serial.print(backTempReading);
     
     Serial.println(); // Add final line ending character only once
   }
