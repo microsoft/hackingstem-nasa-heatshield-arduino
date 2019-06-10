@@ -12,8 +12,8 @@
 // equation to accurately measure the resistance.
 //
 // Pins:
-// A0 Front Thermistor
-// A1 Back Thermistor
+// A0 Material Thermistor
+// A1 Hair Dryer Thermistor
 // 
 // Comments, contributions, suggestions, bug reports, and feature requests 
 // are welcome! For source code and bug reports see: 
@@ -27,8 +27,8 @@
 // MIT License terms detailed in LICENSE.txt 
 // ----------------------------------------------------------------------------
 
-const int kFrontThermPin = A0;
-const int kBackThermPin = A1;
+const int kMaterialThermPin = A0;
+const int kHairDryerThermPin = A1;
 
 // Serial data variables ------------------------------------------------------
 const byte kNumberOfChannelsFromExcel = 6; //Number of channels coming in from Excel
@@ -101,19 +101,19 @@ float steinhart (float resistanceReading){
 // OUTGOING SERIAL DATA PROCESSING CODE----------------------------------------
 void sendDataToSerial()
 {
-  float frontResistanceReading = getResistance(kFrontThermPin);
-  float frontTempReading = steinhart(frontResistanceReading);
-  float backResistanceReading = getResistance(kBackThermPin);
-  float backTempReading = steinhart(backResistanceReading);
+  float materialResistanceReading = getResistance(kMaterialThermPin);
+  float materialTempReading = steinhart(materialResistanceReading);
+  float hairDryerResistanceReading = getResistance(kHairDryerThermPin);
+  float hairDryerTempReading = steinhart(hairDryerResistanceReading);
 
   // Enter into this only when serial interval has elapsed
   if((millis() - serialPreviousTime) > kSerialInterval) 
   {
     serialPreviousTime = millis(); // Reset serial interval timestamp
 
-    Serial.print(frontTempReading);
+    Serial.print(materialTempReading);
     Serial.print(kDelimiter);
-    Serial.print(backTempReading);
+    Serial.print(hairDryerTempReading);
     
     Serial.println(); // Add final line ending character only once
   }
