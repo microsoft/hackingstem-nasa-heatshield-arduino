@@ -86,9 +86,10 @@ void sendDataToSerial()
     serialPreviousTime = millis(); // Reset serial interval timestamp
     float materialTempReading = getTemperature(getResistance(kMaterialThermPin));
     float hairDryerTempReading = getTemperature(getResistance(kHairDryerThermPin));
-    Serial.print(materialTempReading);
-    Serial.print(kDelimiter);
     Serial.print(hairDryerTempReading);
+    Serial.print(kDelimiter);
+    Serial.print(materialTempReading);
+
     
     Serial.println(); // Add final line ending character only once
   }
