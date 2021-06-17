@@ -1,4 +1,12 @@
 /*
+// Heat_Syringe.ino is for use with the Hacking STEM NASA Heat Shield lesson plan
+// available from Microsoft Education Workshop at https://aka.ms/heatshield
+// http://aka.ms/hackingSTEM 
+// 
+// This project uses an Arduino UNO microcontroller board. More information can
+// be found by visiting the Arduino website: 
+// https://www.arduino.cc/en/main/arduinoBoardUno 
+
  MPL3115A2 Barometric Pressure Sensor Library Example Code
  By: Nathan Seidle
  SparkFun Electronics

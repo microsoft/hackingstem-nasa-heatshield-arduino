@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // Thermistor.ino is for use with the Hacking STEM NASA Heat Shield lesson plan
-// available from Microsoft Education Workshop at http://aka.ms/hackingSTEM 
+// available from Microsoft Education Workshop at https://aka.ms/heatshield
+// http://aka.ms/hackingSTEM 
 // 
 // This project uses an Arduino UNO microcontroller board. More information can
 // be found by visiting the Arduino website: 
