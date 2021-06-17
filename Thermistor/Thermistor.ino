@@ -18,7 +18,7 @@
 // 
 // Comments, contributions, suggestions, bug reports, and feature requests 
 // are welcome! For source code and bug reports see: 
-// http://github.com/[TODO: github path to Hacking STEM] 
+// https://github.com/microsoft/hackingstem-nasa-heatshield-arduino
 // 
 // Derived from https://github.com/adafruit/Adafruit_Learning_System_Guides/blob/master/Themistor/Example3/thermistor3.ino
 // Copyright (c) 2018, Limor Fried, Adafruit Industries
